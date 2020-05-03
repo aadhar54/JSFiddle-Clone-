@@ -21,5 +21,14 @@ function encryptData(rawData) {
         TODO: actually encrypt data
         logic: turn lowercase chars to uppercase and viceversa 
      */
-    return 'XXXXXXXX'
+    let newh = "";
+    for(let ch in rawData){
+        if(rawData[ch]===rawData[ch].toLowerCase()){
+            newh = newh + rawData[ch].toUpperCase()
+        }
+        else{
+            newh = newh + rawData[ch].toLowerCase()
+        }
+    }
+    return newh;
 }
